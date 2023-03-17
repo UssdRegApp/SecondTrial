@@ -11,5 +11,4 @@
         public function mainMenuUnregistered(){}
         public function mainMenuRegistered(){}
     }
-
 ?>
