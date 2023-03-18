@@ -10,7 +10,7 @@ class DBConnector{
         ];
         try{
             $this->pdo = new PDO($dsn,'root','',$options);
-            echo "Con success";
+            
         }
         catch(PDOException $e){
             echo $e->getMessage();
