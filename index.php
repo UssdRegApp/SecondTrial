@@ -13,7 +13,7 @@ if($text == "" && $isRegistered){
 }else if($text == "" && !$isRegistered){
     //text is empty and user is registered
     $menu->mainMenuRegistered();
-}else if($isRegistered){
+}else{
     //text is not empty and user is unregistered
     $textArray = explode("*",$text);
     switch($textArray[0]){
