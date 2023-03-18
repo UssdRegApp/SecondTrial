@@ -8,7 +8,15 @@
             $this->sessionId = $sessionId;
         }
         
-        public function mainMenuUnregistered(){}
-        public function mainMenuRegistered(){}
+        public function mainMenuUnregistered(){
+            $response = "END You are registered and your registration is pending";
+            echo $response;
+        }
+        public function mainMenuRegistered(){
+            $response =" CON Welcome to Self service registration\n";
+            $response .= "1. Register\n";
+            echo $response;
+        }
+        public function register(){}
     }
 ?>
