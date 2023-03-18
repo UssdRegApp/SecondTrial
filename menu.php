@@ -1,5 +1,7 @@
 <?php
+include_once 'user.php';
     class Menu{
+        
         protected $text;
         protected $sessionId;
     
@@ -17,7 +19,7 @@
             $response .= "1. Register\n";
             echo $response;
         }
-        public function register($textArray){
+        public function register($textArray,$phone,$pdo){
             $level = count($textArray);
             if ($level == 1){
                 echo "CON Enter your Id number";
@@ -31,6 +33,10 @@
             $location = $textArray[1];
 
             ///register User
+            $user = new User($phone);
+            $user->setId($id);
+            $user->setLocation($location);
+            $user->registerUser($pdo);
             echo "END Your registration has been successful. Kindly wait for disbursment";
         }
        
